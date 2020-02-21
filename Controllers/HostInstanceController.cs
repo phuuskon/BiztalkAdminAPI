@@ -8,11 +8,15 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BiztalkAdminAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Produces("application/json")]
+    [Route("BiztalkAdminAPI/[controller]")]
     [ApiController]
     public class HostInstanceController : ControllerBase
     {
-        // GET: api/HostInstance
+        /// <summary>
+        /// Lists host instances in BizTalk server
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IEnumerable<HostInstance> Get()
         {
@@ -58,6 +62,17 @@ namespace BiztalkAdminAPI.Controllers
             return hostInstances;
         }
 
+        /// <summary>
+        /// Start or stop host instance.
+        /// </summary>
+        /// <remarks>
+        /// Sample requests:
+        ///  PUT /BizTalkAdminAPI/HostInstance/servername/hostinstance/Start
+        ///  PUT /BizTalkAdminAPI/HostInstance/servername/hostinstance/Stop
+        /// </remarks>
+        /// <param name="servername"></param>
+        /// <param name="hostname"></param>
+        /// <param name="state"></param>
         [HttpPut("{servername}/{hostname}/{state}")]
         public void Put(string servername, string hostname, string state)
         {
