@@ -62,13 +62,13 @@ namespace BiztalkAdminAPI
         {
             app.UseSwagger(c =>
             {
-                c.RouteTemplate = "BiztalkAdminAPI/swagger/{documentname}/swagger.json";
+                c.RouteTemplate = "swagger/{documentName}/swagger.json";
             });
 
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/BiztalkAdminAPI/swagger/v1/swagger.json", "BizTalk Admin API V1");
-                c.RoutePrefix = "BiztalkAdminAPI/swagger";
+                c.SwaggerEndpoint("../swagger/v1/swagger.json", "BizTalk Admin API V1");
+                //c.RoutePrefix = "v1/swagger";
             });
 
             if (env.IsDevelopment())

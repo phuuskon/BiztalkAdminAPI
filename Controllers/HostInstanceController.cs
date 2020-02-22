@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace BiztalkAdminAPI.Controllers
 {
     [Produces("application/json")]
-    [Route("BiztalkAdminAPI/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class HostInstanceController : ControllerBase
     {
