@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BiztalkAdminAPI
+namespace BiztalkAdminAPI.Models
 {
     public class HostInstance
     {
@@ -24,5 +24,23 @@ namespace BiztalkAdminAPI
         public string ServiceState { get; set; }
         public string Status { get; set; }
         public string UniqueID { get; set; }
+
+        public enum ServiceStateEnum
+        {
+            Stopped = 1,
+            Start_pending = 2,
+            Stop_pending = 3,
+            Running = 4,
+            Continue_pending = 5,
+            Pause_pending = 6,
+            Paused = 7,
+            Unknown = 8
+        }
+
+        public enum HostTypeEnum
+        {
+            In_process = 1,
+            Isolated = 2
+        }
     }
 }

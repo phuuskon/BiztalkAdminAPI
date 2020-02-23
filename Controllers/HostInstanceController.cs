@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Management;
 using System.Threading.Tasks;
+using BiztalkAdminAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -39,15 +40,16 @@ namespace BiztalkAdminAPI.Controllers
                     hostInstance.ConfigurationState = inst["ConfigurationState"] != null ? inst["ConfigurationState"].ToString() : "";
                     hostInstance.Description = inst["Description"] != null ? inst["Description"].ToString() : "";
                     hostInstance.HostName = inst["HostName"] != null ? inst["HostName"].ToString() : "";
-                    hostInstance.HostType = inst["HostType"] != null ? inst["HostType"].ToString() : "";
+                    hostInstance.HostType = inst["HostType"] != null ? Enum.GetName(typeof(HostInstance.HostTypeEnum),inst["HostType"]) : "";
                     hostInstance.InstallDate = inst["InstallDate"] != null ? inst["InstallDate"].ToString() : "";
                     hostInstance.IsDisabled = inst["IsDisabled"] != null ? inst["IsDisabled"].ToString() : "";
                     hostInstance.Logon = inst["Logon"] != null ? inst["Logon"].ToString() : "";
                     hostInstance.MgmtDbNameOverride = inst["MgmtDbNameOverride"] != null ? inst["MgmtDbNameOverride"].ToString() : "";
+                    hostInstance.MgmtDbServerOverride = inst["MgmtDbServerOverride"] != null ? inst["MgmtDbServerOverride"].ToString() : "";
                     hostInstance.Name = inst["Name"] != null ? inst["Name"].ToString() : "";
                     hostInstance.NTGroupName = inst["NTGroupName"] != null ? inst["NTGroupName"].ToString() : "";
                     hostInstance.RunningServer = inst["RunningServer"] != null ? inst["RunningServer"].ToString() : "";
-                    hostInstance.ServiceState = inst["ServiceState"] != null ? inst["ServiceState"].ToString() : "";
+                    hostInstance.ServiceState = inst["ServiceState"] != null ? Enum.GetName(typeof(HostInstance.ServiceStateEnum), inst["ServiceState"]) : "";
                     hostInstance.Status = inst["Status"] != null ? inst["Status"].ToString() : "";
                     hostInstance.UniqueID = inst["UniqueID"] != null ? inst["UniqueID"].ToString() : "";
 
