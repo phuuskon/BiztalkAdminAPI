@@ -6,7 +6,7 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  dotnetSdkVersion: '3.1.100'h
+  dotnetSdkVersion: '3.1.100'
 
 steps:
 - task: UseDotNet@2
@@ -23,7 +23,7 @@ steps:
   inputs:
     command: 'restore'
     restoreSolution: '**/*.sln'
-    
+
 - task: DotNetCoreCLI@2
   displayName: 'Build the project - $(buildConfiguration)'
   inputs:
