@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiztalkAdminAPI", "BiztalkAdminAPI.csproj", "{B6744230-A263-45B8-B649-FEE07FE06172}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiztalkAdminAPI", "BiztalkAdminAPI\BiztalkAdminAPI.csproj", "{B6744230-A263-45B8-B649-FEE07FE06172}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiztalkAdminAPI.Tests", "BiztalkAdminAPI.Tests\BiztalkAdminAPI.Tests.csproj", "{E553A2AC-74B1-4D77-BBDD-4237295C6D8B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{B6744230-A263-45B8-B649-FEE07FE06172}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6744230-A263-45B8-B649-FEE07FE06172}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6744230-A263-45B8-B649-FEE07FE06172}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E553A2AC-74B1-4D77-BBDD-4237295C6D8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E553A2AC-74B1-4D77-BBDD-4237295C6D8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E553A2AC-74B1-4D77-BBDD-4237295C6D8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E553A2AC-74B1-4D77-BBDD-4237295C6D8B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
