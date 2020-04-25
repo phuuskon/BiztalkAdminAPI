@@ -7,10 +7,54 @@ This is a complementary API for BizTalk Management API shipped with BizTalk.
 ### BizTalkStatus
 
 With BizTalkStatus you can get an overview of BizTalk Server current state.
+Returned fields:
+- HostInstancesRunning: Number of host instances in running state
+- HostInstancesNotRunning: Number of host instance in state other that running
+- ReceiveLocationsEnabled: Number of receive locations enabled
+- ReceiveLocationsDisabled: Number of receive locations disabled
+- SuspendedInstancesCount: Number of suspended service instances
+- RunningInstancesCount: Number of running service instances
 
 ### HostInstance
 
-With HostInstance operations you can list and start/stop host instances running in BizTalk. 
+With HostInstance operations you can list and start/stop host instances running in BizTalk.
+Returned fields:
+- Caption
+- ClusterInstanceType
+- ConfigurationState
+- Description
+- HostName
+- HostType
+- InstallDate
+- IsDisabled
+- Logon
+- MgmtDbNameOverride
+- MgmtDbServerOverride
+- Name
+- NTGroupName
+- RunningServer
+- ServiceState
+- Status
+- UniqueID
+
+### ReceiveLocation
+
+With ReceiveLocation you can get list of receive locations in BizTalk. 
+Returned fields:
+- ApplicatioName: Application containing receive location
+- ReceivePortName: Receive port name of the receive location
+- ReceiveLocationName: Name of the receive location
+- Disabled: true if receive location disabled, false if enabled
+- LastMessageReceivedDateTime: Latest datetime when receivelocation received message, null if never
+
+### SendPort
+
+With SendPort you can get list of sendports in BizTalk. 
+Returned fields:
+- ApplicatioName: Application containing receive location
+- SendPortName: Receive port name of the receive location
+- PortStatus: possible statuses of port None, Unenlisted, Stopped, Started
+- LastMessageSentDateTime: Latest datetime when sendport sent message, null if never
 
 ## Installation
 

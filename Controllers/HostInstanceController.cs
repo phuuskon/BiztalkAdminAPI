@@ -58,7 +58,6 @@ namespace BiztalkAdminAPI.Controllers
             }
             catch (Exception ex)
             {
-                //System.Diagnostics.EventLog.WriteEntry("BizTalk Server", "Exception Occurred in enumerateAndStartHostInstances fuction call. " + excep.Message, System.Diagnostics.EventLogEntryType.Error);
                 throw new Exception("Exception Occurred in get hostinstances call. " + ex.Message);
             }
             return hostInstances;
