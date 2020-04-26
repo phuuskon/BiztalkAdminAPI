@@ -48,8 +48,6 @@ namespace BiztalkAdminAPI.Controllers
                 searchObject = new ManagementObjectSearcher("root\\MicrosoftBizTalkServer", "Select * from MSBTS_ServiceInstance Where (ServiceClass=1 or ServiceClass=4) and (ServiceStatus=4 or ServiceStatus=32)", enumOptions);
                 BtsStatus.SuspendedInstancesCount = searchObject.Get().Count;
 
-
-
             }
             catch (Exception ex)
             {

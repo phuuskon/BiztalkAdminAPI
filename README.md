@@ -41,7 +41,7 @@ Returned fields:
 
 With ReceiveLocation you can get list of receive locations in BizTalk. 
 Returned fields:
-- ApplicatioName: Application containing receive location
+- ApplicationName: Application containing receive location
 - ReceivePortName: Receive port name of the receive location
 - ReceiveLocationName: Name of the receive location
 - Disabled: true if receive location disabled, false if enabled
@@ -51,10 +51,19 @@ Returned fields:
 
 With SendPort you can get list of sendports in BizTalk. 
 Returned fields:
-- ApplicatioName: Application containing receive location
-- SendPortName: Receive port name of the receive location
+- ApplicationName: Application containing sendport
+- SendPortName: Sendport name
 - PortStatus: possible statuses of port None, Unenlisted, Stopped, Started
 - LastMessageSentDateTime: Latest datetime when sendport sent message, null if never
+
+### Orchestration
+
+With Orchestration you can get list of orchestrations in BizTalk. 
+Returned fields:
+- ApplicationName: Application containing orchestration
+- OrchestrationName: Full name of the orchestration
+- OrchestrationStatus: possible statuses of orchestration None, Unenlisted, Stopped, Started
+- LastStartDateTime: Latest datetime when orchestration started, null if never
 
 ## Installation
 
